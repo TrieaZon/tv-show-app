@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { IShowDisplay } from '../ishow-display';
 
 @Component({
   selector: 'app-home-screen-show',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./home-screen-show.component.css']
 })
 export class HomeScreenShowComponent {
-
+  display: IShowDisplay = {
+    
+  }
 }
