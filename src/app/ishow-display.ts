@@ -1,10 +1,10 @@
 export interface IShowDisplay {
-    showImg: string,
-    showId: number,
-    showTitle: string,
-    language: string,
-    runningStatus: string,
-    rating: number,
-    showDesc: string,
+    tvShowImg: string,
+    tvShowId: number,
+    tvShowTitle: string,
+    tvShowLanguage: string,
+    tvShowRunningStatus: string,
+    tvShowRating: number,
+    tvShowDesc: string,
 
 }
