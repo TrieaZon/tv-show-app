@@ -9,9 +9,12 @@ import { ShowApiService } from '../show-api.service';
 })
 export class HomeScreenShowComponent {
   display: IShowDisplay = {
-    tvShowImg: '',
-    tvShowId: 33921,
-    tvShowTitle: 'Franxx',
+    tvShowImg: {
+      medium: '',
+      original: '',
+    },
+    tvShowId: 0,
+    tvShowTitle: '',
     tvShowLanguage: '',
     tvShowRunningStatus: '',
     tvShowRating: 0,
@@ -19,6 +22,8 @@ export class HomeScreenShowComponent {
   }
   
   constructor(private showApiService: ShowApiService){
-    this.showApiService.getShowDisplay(33921)
+    
+    this.showApiService.getShowDisplay(33921).subscribe(
+    data => this.display = data);
   }
 }

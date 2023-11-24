@@ -1,5 +1,8 @@
 export interface IShowDisplay {
-    tvShowImg: string,
+    tvShowImg: {
+        medium: string,
+        original: string,
+    },
     tvShowId: number,
     tvShowTitle: string,
     tvShowLanguage: string,

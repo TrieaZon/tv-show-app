@@ -12,15 +12,21 @@ export class ShowApiService {
   constructor(private httpClient: HttpClient) { }
 
   getShowDisplay(tvShowId: number) {
-    return this.httpClient.get<IShowDisplayData>(`https://
-    api.tvmaze.com/lookup/shows?thetvdb=${tvShowId}`).pipe(
+    
+    return this.httpClient.get<IShowDisplayData>(
+      `https://api.tvmaze.com/shows/${tvShowId}`
+    ).pipe(
       map(data => this.transformToIShowDisplay(data))
     )
   }
   
   private transformToIShowDisplay(data: IShowDisplayData): IShowDisplay {
+    
     return {
-      tvShowImg: data.image.medium,
+      tvShowImg: {
+        medium: data.image.medium,
+        original: data.image.original,
+      },
       tvShowId: data.id,
       tvShowTitle: data.name,
       tvShowLanguage: data.language,
