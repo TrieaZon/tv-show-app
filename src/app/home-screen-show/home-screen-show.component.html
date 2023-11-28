@@ -1,16 +1,22 @@
-<div style='display: flex; flex-flow: row wrap; flex-wrap: wrap; flex-direction: row;'>
-    <div>
-        <img [src]="display.tvShowImg.medium" />
+<mat-grid-list cols="3">
+    <mat-grid-tile colspan="1">
+         <img [src]="display.tvShowImg.medium" />
+    </mat-grid-tile>
         
-    </div>
-
-    <div>
-        <mat-card >
-            <span>{{ display.tvShowTitle }}</span>
-            <span>{{ display.tvShowRating }}</span>
-            <span>{{ display.tvShowRunningStatus }}</span>
-            <span>{{ display.tvShowLanguage }}</span>
-            <span>{{ display.tvShowDesc }}</span>
-        </mat-card>
-    </div>
-</div>
+    <mat-grid-tile colspan="2">
+                
+        <span>{{ display.tvShowTitle }}</span>
+        <span>{{ display.tvShowRating }}</span>
+        <span>{{ display.tvShowRunningStatus }}</span>
+        <span>{{ display.tvShowLanguage }}</span>
+        
+                
+    </mat-grid-tile>
+    
+    <mat-grid-tile rowspan='1'>
+        <span>{{ display.tvShowDesc }}</span>
+    </mat-grid-tile>
+    <!--<div flex='auto'>-->
+    <!--    <span>ad space</span>-->
+    <!--</div>-->
+</mat-grid-list>

@@ -12,6 +12,7 @@ import {MatButtonModule} from '@angular/material/button'
 import {MatIconModule} from '@angular/material/icon'
 import {FormsModule, ReactiveFormsModule} from '@angular/forms'
 import { TvSearchComponent } from './tv-search/tv-search.component'
+import {MatGridListModule} from '@angular/material/grid-list';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { TvSearchComponent } from './tv-search/tv-search.component'
     MatButtonModule,
     MatIconModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
