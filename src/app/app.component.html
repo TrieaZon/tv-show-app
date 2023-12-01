@@ -1,9 +1,18 @@
 <!-- css id for main page title  -->
-<div>  
-  <div>
-    <h1>TV Show Browser</h1>
-    <p>Looking for more information on a TV Show?</p>
-    <p>Use the search function to do a TV show lookup!</p>
+<mat-toolbar color="primary">
+  <span>
+    TV Show Browser
+  </span>
+</mat-toolbar>
+
+<div style="display: flex; flex-wrap: wrap;">  
+  <div style="background-color: #e0e0e0;">
+    <mat-toolbar>
+      <p>Looking for more information on a TV Show?</p>
+    </mat-toolbar>  
+    <mat-toolbar>  
+      <p>Use the search function to do a TV show lookup!</p>
+    </mat-toolbar>
     <app-tv-search></app-tv-search>
   </div>
   
