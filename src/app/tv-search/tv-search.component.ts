@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import {FormControl, Validators} from '@angular/forms'
+import { debounceTime } from 'rxjs/operators';
 
 @Component({
   selector: 'app-tv-search',
@@ -7,13 +8,18 @@ import {FormControl, Validators} from '@angular/forms'
   styleUrls: ['./tv-search.component.css']
 })
 export class TvSearchComponent {
+  @Output() searchEvent = new EventEmitter<string>();
   search = new FormControl('', [Validators.minLength(3)])
   
+  
   constructor(){
-    this.search.valueChanges.subscribe(searchValue => {
+    
+    this.search.valueChanges
+    .pipe(debounceTime(500))
+    .subscribe(searchValue => {
       
       if(!this.search.invalid){
-        console.log(searchValue);
+        this.searchEvent.emit(searchValue??undefined)
       }
       
     })

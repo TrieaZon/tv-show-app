@@ -1,6 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input,  } from '@angular/core';
 import { IShowDisplay } from '../ishow-display';
-import { ShowApiService } from '../show-api.service';
 
 @Component({
   selector: 'app-home-screen-show',
@@ -8,7 +7,7 @@ import { ShowApiService } from '../show-api.service';
   styleUrls: ['./home-screen-show.component.css']
 })
 export class HomeScreenShowComponent {
-  display: IShowDisplay = {
+  @Input() homeDisplay: IShowDisplay = {
     tvShowImg: {
       medium: '',
       original: '',
@@ -19,11 +18,5 @@ export class HomeScreenShowComponent {
     tvShowRunningStatus: '',
     tvShowRating: 0,
     tvShowDesc: '',
-  }
-  
-  constructor(private showApiService: ShowApiService){
-    
-    this.showApiService.getShowDisplay(33921).subscribe(
-    data => this.display = data);
   }
 }

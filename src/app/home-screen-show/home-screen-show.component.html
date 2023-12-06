@@ -2,21 +2,21 @@
     <span style='display: flex; align-items: center;'>
         
         <!--<div>-->
-            <img [src]="display.tvShowImg.original" style="max-width: 20rem;"/>
+            <img [src]="homeDisplay.tvShowImg.original" style="max-width: 20rem;"/>
         <!--</div>-->
         
         <mat-card class="main-card">
             <mat-card-header>
                 
-                <mat-card-title>{{ display.tvShowTitle }}</mat-card-title>
-                <mat-card-subtitle>Rating: {{ display.tvShowRating }}</mat-card-subtitle>
-                <mat-card-subtitle>Running Status: {{ display.tvShowRunningStatus }}</mat-card-subtitle>
-                <mat-card-subtitle>Language: {{ display.tvShowLanguage }}</mat-card-subtitle>
+                <mat-card-title>{{ homeDisplay.tvShowTitle }}</mat-card-title>
+                <mat-card-subtitle>Rating: {{ homeDisplay.tvShowRating }}</mat-card-subtitle>
+                <mat-card-subtitle>Running Status: {{ homeDisplay.tvShowRunningStatus }}</mat-card-subtitle>
+                <mat-card-subtitle>Language: {{ homeDisplay.tvShowLanguage }}</mat-card-subtitle>
                 
             </mat-card-header>
             <mat-card-content style="min-width: 40vh;">
                 <p>
-                    {{ display.tvShowDesc }}
+                    {{ homeDisplay.tvShowDesc }}
                 </p>
             </mat-card-content>
             

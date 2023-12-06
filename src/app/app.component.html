@@ -13,7 +13,7 @@
     <mat-toolbar>  
       <p>Use the search function to do a TV show lookup!</p>
     </mat-toolbar>
-    <app-tv-search></app-tv-search>
+    <app-tv-search (searchEvent)="doSearch($event)">"darling in"</app-tv-search>
   </div>
   
   <!-- css id for basic description text of what the app does -->
@@ -21,7 +21,7 @@
   <!-- this will hold the component that displays the api details -->
   <div>
     
-    <app-home-screen-show></app-home-screen-show>
+    <app-home-screen-show [homeDisplay]="searchDisplay"></app-home-screen-show>
     
   </div>
 </div>
